@@ -19,7 +19,7 @@ class SpellTableViewController: UITableViewController {
             spells.append([Spell]())
             prepared.append([Bool]())
         }
-        self.tableView.sectionHeaderHeight = 70
+        self.tableView.sectionHeaderHeight = 30
         //self.tableView.sectionHeaderHeight = UITableViewAutomaticDimension;
         //self.tableView.estimatedSectionHeaderHeight = 25;
         // Load the sample data.

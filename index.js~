@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+//this comment is here to test branching2forrealz
+=======
+//this comment is here to test branchingIthink.
+>>>>>>> testing
+
 //1
 var http = require('http');
 	express = require('express');

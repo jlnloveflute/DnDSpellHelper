@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-//this comment is here to test branching2forrealz
-=======
-//this comment is here to test branchingIthink.
->>>>>>> testing
-
 //1
 var http = require('http');
 	express = require('express');
@@ -11,6 +5,7 @@ var http = require('http');
 	MongoClient = require('mongodb').MongoClient,
 	Server = require('mongodb').Server,
 	CollectionDriver = require('./collectionDriver').CollectionDriver;
+
 
 var app = express();
 app.set('port', process.env.PORT || 3000);
@@ -23,13 +18,14 @@ var mongoPort = 27017;
 var collectionDriver;
  
 var mongoClient = new MongoClient(new Server(mongoHost, mongoPort)); //B
+
 mongoClient.open(function(err, mongoClient) { //C
   if (!mongoClient) {
-      console.error("Error! Exiting... Must start MongoDB first");
-      process.exit(1); //D
-  }
-  var db = mongoClient.db("MyDatabase");  //E
-  collectionDriver = new CollectionDriver(db); //F
+    console.error("Error! Exiting... Must start MongoDB first");
+    process.exit(1); //D
+ }
+var db = mongoClient.db("MyDatabase");  //E
+ collectionDriver = new CollectionDriver(db); //F
 });
 
 app.use(express.static(path.join(__dirname, 'public')));

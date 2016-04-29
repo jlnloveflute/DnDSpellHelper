@@ -19,7 +19,7 @@ var collectionDriver;
  
 var mongoClient = new MongoClient(new Server(mongoHost, mongoPort)); //B
 
-mongoClient.connect(function(err, mongoClient) { //C
+mongoClient.open(function(err, mongoClient) { //C
   if (!mongoClient) {
     console.error("Error! Exiting... Must start MongoDB first");
     process.exit(1); //D

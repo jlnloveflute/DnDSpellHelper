@@ -11,12 +11,12 @@ app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
-//var db;
+var db;
 
 //testing
-var mongoose = require("mongoose");
-var db = mongoose.createConnection('mongodb://derp:dnd97531@ds021711.mlab.com:21711/dndhelper');
-//emd
+//var mongoose = require("mongoose");
+//var db = mongoose.createConnection('mongodb://derp:dnd97531@ds021711.mlab.com:21711/dndhelper');
+//end
 
 // Connect to the database before starting the application server.
 mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, database) {

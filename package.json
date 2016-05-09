@@ -2,11 +2,15 @@
   "name": "mongo-server",
   "version": "0.0.1",
   "dependencies": {
-    "express": "3.3.4", 
-    "jade": "1.1.5", 
+    "bcrypt": "^0.8.6",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "1.13.3",
+    "express": "3.3.4",
+    "jade": "1.1.5",
     "mongodb": "2.1.18",
-    "mongoose": "4.1.11", 
-    "body-parser": "1.13.3"
+    "mongoose": "4.1.11",
+    "passport": "0.1.17",
+    "passport-local": "0.1.6"
   },
   "engines": {
     "node": "4.4.2"

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>D&amp;D SpellHelper by jlnloveflute</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">D&amp;D SpellHelper</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/jlnloveflute/DnDSpellHelper" class="btn">View on GitHub</a>
+      <a href="https://github.com/jlnloveflute/DnDSpellHelper/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/jlnloveflute/DnDSpellHelper/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p>The demo/presentation of our app can be found here:
+<a href="https://drive.google.com/file/d/0B0tSWh4LphMpZFl6Y3RvOUFHV3M/view?usp=sharing">https://drive.google.com/file/d/0B0tSWh4LphMpZFl6Y3RvOUFHV3M/view?usp=sharing</a></p>
+
+<p>If you've ever played a tabletop RPG, you know how it goes: you have to remember all of your weapons, armor, buffs, skills, whether or not it’s raining in the next town over, etc, etc. 
+Most of the time, it’s a struggle to keep track of all of this information even with a character sheet, and never mind if you’ve left it in your room! But have no fear: D&amp;D Helper is here to save the day! 
+It’s a character sheet deluxe for the iOS, centered around player convenience. This app will keep track of your modifiers, help level you up, remember which spells are still active, and much, much more. 
+It'll even comes pre-loaded with all the class, spell, and item info for D&amp;D ver. 3.5 from Pathfinder! With this, you'll spend less time flipping through manuals and more time playing the game! </p>
+
+<hr>
+
+<h1>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Overview</strong>
+</h1>
+
+<p>Our project is an application for iOS that is meant to be a tabletop RPG helper. This application will keep track of each character’s stats, as well as the multitude of modifications that keep changing over the course of the game. It will also automatically calculate and randomize the dice roll for the player, eliminating the need to do so manually each time an action is taken. </p>
+
+<h1>
+<a id="requirements-and-target-audiences" class="anchor" href="#requirements-and-target-audiences" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Requirements and Target Audiences</strong>
+</h1>
+
+<p>This app targets people who play tabletop RPGs. In particular, this app will be most useful for players of Dungeons and Dragons (D&amp;D) version 3.5.</p>
+
+<p>Currently, many tabletop RPGs require keeping track of a large number of statistics per character, that in turn usually involve some sort of mathematics to calculate whether the statistics benefit or detriment other specific skills that characters can use. In addition, games typically include special skills or spells with various aspects that players must keep track of, like the name of the skill/spell, their effects, how many times it can be used and how many times it already has been used, etc.</p>
+
+<p>One common way that players keep track of this is by using paper copies and filling them out with character information. However, this is cumbersome as this typically involves multiple pages, as well as edits and recalculations each time a spell is used or damage is taken or given; points must be erased and rewritten constantly. This becomes problematic if a player miscalculates at any point, forgets the many modifications that their stats give them, or doesn’t keep track of the number of rounds that have passed (most spells typically last a specific number of rounds) as that can drastically affect whether events succeed or not.</p>
+
+<p>Implementing the application on a phone rather than a computer also provides a more portable and convenient way to keep track of character data that is less disorganized and calculation-heavy than physical paper copies, as well as less clunky than having to lug one’s entire computer around to each session. We also expect that it will be able to display multiple relevant pages for one character and be more intuitive to navigate based on touchscreens.</p>
+
+<p>While our system will provide data for D&amp;D version 3.5, if we have time we hope to implement a system where users can put their own data into a generic framework and utilize this app for other games as well.</p>
+
+<h1>
+<a id="functionality" class="anchor" href="#functionality" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Functionality</strong>
+</h1>
+
+<p>Player A is a mage, and wants to use a spell, but this spell can only be used once every 3 rounds, and A isn’t sure if they used it 2 or 3 rounds ago. The app tells them that they have used it 3 rounds ago, and therefore can use the spell. A happily uses the spell, and destroys all the monsters, saving the party from certain death.</p>
+
+<p>Player B was playing as a male human knight last week, but after sitting down with everyone he changes his mind--he wants to play as his other persona, an elf rogue today. B then pulls up the app and selects his other character sheet. Problem solved, no need to go home and grab the other character sheet.</p>
+
+<p>Player C is about to attack a monster. However, they are equipped with two swords, an amulet, an active buff, and two passive buffs. Oh, and it’s raining. Fear not! The app does all the calculations and rolls the dice for C. The attack has failed, but C is relieved that they did not have to waste their time calculating for this unsuccessful attempt.</p>
+
+<p>Player D, similar to C, has successfully calculated all the modifications thanks to the app. However, D is oldschool. He likes rolling his own dice. The app does the calculations for him and lets him select the option to roll the dice himself. D is happy.</p>
+
+<h1>
+<a id="design" class="anchor" href="#design" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Design</strong>
+</h1>
+
+<p>The user interface of this app will allow the player to enter information about the character’s stats and display it when they wish to view it. Each character’s data sheet is divided into several sections, accessible through a menu:</p>
+
+<h2>
+<a id="main" class="anchor" href="#main" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Main:</h2>
+
+<p>This lists the character’s basic information. In particular:
+-Name, Class, Level, and Details (Background, Experience (Current and To the Next Level), Class, Alignment, Religion, Gender, Age, Height, Weight, Skin, Eyes, Hair)</p>
+
+<p>-Ability Scores</p>
+
+<p>-Initiative, Magic Resistance, and Grapple Bonus</p>
+
+<p>-HP, Speed (including bonuses/penalties), Armor Class (Base, Touch, and Flat-Footed)</p>
+
+<p>-Saving Throws</p>
+
+<p>-Race/Class Features</p>
+
+<h2>
+<a id="attacks" class="anchor" href="#attacks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Attacks:</h2>
+
+<p>Lists the base attack bonus and the weapons the character has, as well as their modifiers for each attack. Weapons must be listed in the inventory to be added</p>
+
+<p>-Also displays offensive skill names and descriptions, and the modifiers that apply to each.</p>
+
+<p>-(Being able to view the source of each modifier would also be very convenient.)</p>
+
+<h2>
+<a id="skills" class="anchor" href="#skills" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Skills:</h2>
+
+<p>Lists each skill and their current modifiers. When assigning more points into skills, places skills that the class can learn first in the list.</p>
+
+<h2>
+<a id="feats" class="anchor" href="#feats" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Feats:</h2>
+
+<p>Lists the name and description of feats that the character currently knows.</p>
+
+<h2>
+<a id="spells" class="anchor" href="#spells" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Spells:</h2>
+
+<p>Lists the prepared spells, available spell slots, and the spells you know in each level, as well as the Spell Save DC and Arcane Spell Failure %. Also lists the spell’s components, duration, effect, etc.</p>
+
+<h2>
+<a id="gear" class="anchor" href="#gear" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Gear:</h2>
+
+<p>A list of the defensive equipment a character currently has equipped, with slots for armor, shield, gloves, boots, capes, and accessories. The item must be included in the inventory first.</p>
+
+<h2>
+<a id="inventory" class="anchor" href="#inventory" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Inventory:</h2>
+
+<p>A list of the items a character is holding that the player can add to. Includes item name, description, and weight. Will notify the player that their character is encumbered if the combined weight is too large.</p>
+
+<h2>
+<a id="familiars" class="anchor" href="#familiars" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Familiars:</h2>
+
+<p>List familiars stats (i.e. horses, animal companions, etc.), skills, and description</p>
+
+<h2>
+<a id="misc" class="anchor" href="#misc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Misc:</h2>
+
+<p>A page for notes</p>
+
+<p>The process of the application manages what is on-screen at the moment. It records which calculates the total modifiers for the various stats, attacks, and abilities, as well as displays the information of classes, abilities, and skills that are located within the app’s database. As a large variety of things, from class to the type of enemy you are facing, can influence these modifiers, the process will have to be very thorough in what factors play into each stat. It also allows the user to add, modify, and delete information within a character’s datasheet, as well as delete and add new character sheets as needed. You can also use the app to 
+The data management contains information about the items, spells, races, classes, and abilities in Dungeons and Dragons that have been made available to the public for open use. Currently, we are planning to take this information from the Pathfinder Reference Document or SDR20, which are both online compendiums of this type of information. Additionally, the data entered in the character sheet will at least be saved in local storage; if we have time, we may also implement a login system that allows users to access their character data across multiple devices.
+As this is going to be an iOS app, we will be coding the user interface and process in Swift. The data management storage will be handled in MongoDB, but we will likely be using a Python script to scrape the data from the online resources first.</p>
+
+<h1>
+<a id="timeline" class="anchor" href="#timeline" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Timeline</strong>
+</h1>
+
+<p>Like we say in the next section, none of the members have had any experience in creating an application, so we’re not really sure what kind of timeline we should have or expect. Hopefully, by the end of spring break, we will have looked into data storage and the languages that iOS applications are coded in.</p>
+
+<p>3/18/16 - Have project status website set up</p>
+
+<p>3/21/16 - Finalize project status website and elevator speech</p>
+
+<p>3/24/16 - Set up data storage through MongoDB and Python script</p>
+
+<p>3/26/16 - Build most basic “unpretty” version of the user interface through Swift</p>
+
+<p>3/28/16 - App attempts to implement all core features of the design (Prototype due this week)</p>
+
+<p>4/18/16 - Core functionality of app is working somewhat - need not be perfect yet (Alpha due this week)</p>
+
+<p>4/25/16 - App works well enough to be tested by real users (Beta due this week)</p>
+
+<h1>
+<a id="risks-and-outcomes" class="anchor" href="#risks-and-outcomes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Risks and Outcomes</strong>
+</h1>
+
+<p>Nobody in our group has ever made an application for iOS. The only one who has any tangentially relevant experience in creating applications or suchlike at all is Rita, who created a Chrome extension in Javascript, CSS, and HTML at the last HackPrinceton. In addition, Rita and Cassius have played Dungeons and Dragons before (Rita has played D&amp;D version 3.5 extensively), but Rei doesn’t know it well enough to know exactly what is and isn’t inconvenient for typical D&amp;D players. Alice has never played D&amp;D and has no experience in it whatsoever.
+We all need to learn Swift in order to program the application itself, as well as how to store and retrieve data from MongoDB.
+The hardest part of this assignment will be designing an interface that is most useful for players, as there is only so much information we can show on an iPhone screen at once. Having our beta up as soon as possible and getting a lot of people to test it out is key.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/jlnloveflute/DnDSpellHelper">D&amp;D SpellHelper</a> is maintained by <a href="https://github.com/jlnloveflute">jlnloveflute</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>

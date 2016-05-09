@@ -41,8 +41,6 @@ function handleError(res, reason, message, code) {
 };
 
 //POST request to login 
-//if succeeds will say "Successfully authenticated"
-//if not will say "Failure to authenticate"
 app.post('/login', 
 	 passport.authenticate('local', {
 		 successRedirect: '/loginSuccess', 

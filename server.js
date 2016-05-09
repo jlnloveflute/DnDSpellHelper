@@ -27,11 +27,10 @@ mongoose.connection.on('error', function() {
 mongoose.connection.on("connected", function(ref) {
 	console.log("Connected to  DB!");
   
-	port = process.env.port || 3000;
-	ip = process.env.ip;
-  
-	app.listen(port, ip, function() {
-		console.log('listening on port ' + port);
+	var server = app.listen(process.env.PORT || 8080, function () {
+		var port = server.address().port;
+		console.log("App now running on port", port);
+
 	    });
     });
 

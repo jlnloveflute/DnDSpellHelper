@@ -1,6 +1,7 @@
 {
   "name": "mongo-server",
   "version": "0.0.1",
+
   "dependencies": {
     "bcrypt": "^0.8.6",
     "body-parser": "1.13.3",

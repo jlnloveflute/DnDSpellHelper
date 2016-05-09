@@ -35,7 +35,6 @@ mongoose.connection.on("connected", function(ref) {
 	    });
     });
 
-// CONTACTS API ROUTES BELOW
 // Generic error handler used by all endpoints.
 function handleError(res, reason, message, code) {
     console.log("ERROR: " + reason);

@@ -3,7 +3,11 @@
   "version": "0.0.1",
   "dependencies": {
     "bcrypt": "^0.8.6",
+<<<<<<< HEAD
     "bcrypt-nodejs" : "0.0.3",
+=======
+    "bcrypt-nodejs": "0.0.3",
+>>>>>>> d3ca533a6b0f40935df0d5d0297dca295118ee29
     "body-parser": "1.13.3",
     "express": "3.3.4",
     "jade": "1.1.5",

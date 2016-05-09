@@ -37,7 +37,7 @@ CollectionDriver.prototype.get = function(collectionName, id, callback) { //A
     });
 };
 
-//save new object
+//save a new object
 CollectionDriver.prototype.save = function(collectionName, obj, callback) {
     this.getCollection(collectionName, function(error, the_collection) { //A
       if( error ) callback(error)
